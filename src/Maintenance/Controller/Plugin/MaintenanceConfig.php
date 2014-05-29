@@ -29,7 +29,7 @@ class MaintenanceConfig extends AbstractPlugin
             $form->setData($request->getPost());
             if ($form->isValid()) {
                 $currentRouteParams = $controller->getEvent()->getRouteMatch()->getParams();
-                $configModel->saveChanges(array_merge($form->getData(),
+                $configModel->saveChanges(array_merge_recursive($form->getData(),
                     array('allowed_route' => array($currentRouteParams))));
             }
         }
