@@ -1,5 +1,5 @@
 {
-    "name": "zf2helper/Maintenance",
+    "name": "zf2helper/maintenance",
     "version": "0.0.1",
     "reference":"master",
     "type": "zf-module",
