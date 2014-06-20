@@ -67,7 +67,10 @@ class Config extends Form
         }
         $this->add(array(
             'name' => 'allowed_route',
-            'type' => 'MultiCheckbox',
+            'type' => 'select',
+            'attributes' => array(
+                'multiple' => 'multiple',
+            ),
             'options' => array(
                 'label' => 'List of allowed route',
                 'value_options' => $routeList,
