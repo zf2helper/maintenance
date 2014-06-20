@@ -1,6 +1,6 @@
 {
     "name": "zf2helper/maintenance",
-    "version": "0.0.1",
+    "version": "1.0",
     "reference":"master",
     "type": "zf-module",
     "require": {
