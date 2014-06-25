@@ -83,6 +83,7 @@ class Config extends Form
             'attributes' => array(
                 'value' => 'Save Config',
                 'id' => 'submitButton',
+                'class' => 'btn btn-primary'
             ),
         ));
         
@@ -95,7 +96,8 @@ class Config extends Form
             'attributes' => array(
                 'value' => 'Reset Config',
                 'id' => 'dropButton',
-                'onClick' => 'removeConfig()'
+                'onClick' => 'removeConfig()',
+                'class' => 'btn btn-danger'
             ),
         ));
     }
