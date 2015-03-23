@@ -11,10 +11,16 @@ class IndexController extends AbstractActionController
     {
         $maintenanceConfig = $this->serviceLocator->get('maintenance_config');
 
-        $this->layout()->setTemplate($maintenanceConfig['layout']);
-        $view = new ViewModel(array(
-             'message' => $maintenanceConfig['message'],
-        ));
+        if (!$this->getRequest()->isXmlHttpRequest()){
+            $this->layout()->setTemplate($maintenanceConfig['layout']);
+            $view = new ViewModel(array(
+                 'message' => $maintenanceConfig['message'],
+            ));
+        } else {
+            $view = new \Zend\View\Model\JsonModel(array(
+                'error' => $maintenanceConfig['message']
+            ));
+        }
 
         return $view;
     }
