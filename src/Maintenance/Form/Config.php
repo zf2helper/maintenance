@@ -80,6 +80,7 @@ class Config extends Form
         $this->add(array(
             'name' => 'submit',
             'type' => 'Submit',
+            'options' => array('label' => 'Save Config'),
             'attributes' => array(
                 'value' => 'Save Config',
                 'id' => 'submitButton',
